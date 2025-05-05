@@ -11,20 +11,20 @@ const bici = [
     { nome: "Varietà 4", peso: 11},
     { nome: "Varietà 5", peso: 2},
     { nome: "Varietà 6", peso: 5},
-    { nome: "Varietà 7", peso: 7},
+    { nome: "Varietà 7", peso: 8},
     { nome: "Varietà 8", peso: 3},
     { nome: "Varietà 9", peso: 6},
     { nome: "Varietà 10", peso: 14},
   ];
 
-  let biciLeggera = bici[0];      //   variabile di appoggio per iniziare un confronto
-  for (let i = 0; i < bici.length; i++){  // ciclo di di ispezione dell'array
+  let biciLeggera = bici[0];   //   variabile di appoggio per iniziare un confronto
+  
+for (let i = 0; i < bici.length; i++){  // ciclo di di ispezione dell'array
    if (bici[i].peso < biciLeggera.peso) { // condizione di confronto
     biciLeggera = bici[i];   // cambia il valore della variabile in base al peso delle bici ispezionate
-    console.log(biciLeggera.peso, biciLeggera.nome);
-   }
-  }
-
+}
+}
+console.log(biciLeggera.peso, biciLeggera.nome);
 
 
 
@@ -48,15 +48,25 @@ const squadre = [
     { nome: "Monza", puntiFatti: 0, golSubiti: 0},
     { nome: "Milazzo", puntiFatti: 0, golSubiti: 0},
   ];
-   
+
   for (let i = 0; i < squadre.length; i++) {
     const curPoints = squadre[i];
     const curGol = squadre[i];
     curPoints.puntiFatti = Math.floor(Math.random() * 100);
     curGol.golSubiti = Math.floor(Math.random() * 100);
-  }
+  }  console.log(squadre);
+
+
   
-  console.log(squadre);
+const squadre2 = [];
+
+for (let i = 0; i < squadre.length; i++) {
+    squadre2.push({nome: squadre[i].nome, golSubiti: squadre[i].golSubiti})
+}
+
+console.log(squadre2);
+
+
   
  
 
