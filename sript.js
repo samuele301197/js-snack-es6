@@ -69,4 +69,36 @@ console.log(squadre2);
 
   
  
+// Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri. Non usare i metodi di array di JS
 
+
+const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+function myFunction(array, numero1, numero2) {
+    let array1 = [];
+    for (let i = numero1; i <= numero2; i++) {
+        array1.push(array[i]);
+    } 
+    return array1;
+}
+const risultato = myFunction(numeri, 2, 5);
+console.log(risultato);
+
+
+
+const numbersMy = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+function myNumbers(array, a, b) {
+    let nuovo = [];
+
+    for (let i = a; i <= b; i++) {
+      nuovo.push(numbersMy[i]);
+    }
+
+    return nuovo;
+}
+
+const ciao = myNumbers(numbersMy, 3, 6);
+console.log(ciao);
